@@ -1,0 +1,37 @@
+﻿<div ng-controller="albumsController as view" class="container container-fluid">
+    <div class="alert alert-dismissable alert-{{view.error.icon}}"
+         ng-show="view.error.message"
+         role="alert">
+        <button type="button" class="close" data-dismiss="alert">
+            <span aria-hidden="true">&times;</span><span class="sr-only">סגור</span>
+        </button>
+        <span ng-bind="view.error.message"></span>
+    </div>
+    <div class="page-header-text"><i class="fa fa-list"></i> תפריט </div>
+    <hr style="margin-top: 6px;" />
+
+    <div class="album">
+        <div>
+            <a style="text-align: right;font-size: 1.6em" id="lnkandr" href="http://www.app.eco-t.co.il/HomeDirector.aspx" data-rel="dialog" data-ajax="false"><i class='fa fa-align-left'></i>    ניהול הודעות בניין  </a>
+        </div>
+    </div>
+    <br />
+    <br />
+
+
+    <!-- use a custom $scope filter to search only artist and album name instead of filter: view.searchText -->
+    <!--<div class="album" ng-repeat="album in view.albums | filter: view.albumsFilter:view.searchText">
+        <div class="album-overlay">
+            <a href="#/album/edit/{{album.Id}}"><i class="fa fa-edit" title="Edit"></i></a> &nbsp;
+            <a ng-click="view.deleteAlbum(album)"><i class="fa fa-remove" title="Delete"></i></a>
+        </div>
+        <div ng-click="view.albumClick(album)" ng-touch="view.albumClick(album)">
+            <img ng-src="{{album.ImageUrl}}" class="album-image" />
+            <div style="padding-left: 80px;">
+                <div class="album-title">{{album.Title}}</div>
+                <div class="album-artist">by {{album.Artist.ArtistName}} {{(album.Year ? 'in ' + album.Year : '')}}</div>
+                <div class="album-descript">{{album.Description}}</div>
+            </div>
+        </div>
+    </div>-->
+</div>
