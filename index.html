@@ -12,21 +12,13 @@
 
     <link rel="icon" href="touch-icon.png" />
     <meta name="msapplication-TileImage" content="touch-icon.png">
-    <title>OGE</title>
-    <link href="css/bootstrap.min.css" rel="stylesheet" />
-    <link href="css/bootstrap-theme.css" rel="stylesheet" />
-    <link href="css/font-awesome.min.css" rel="stylesheet" />
-
-    <link href="css/musicstore.css" rel="stylesheet" />
 </head>
-<body ng-app="app">
+<body>
    
     <script>
 
     document.addEventListener("deviceready", onDeviceReady, false);
 
-    // device APIs are available
-    //
     function onDeviceReady() {
         var ref = window.open('http://www.jetcopy.co.il/', '_self', 'location=yes');
         ref.addEventListener('loadstart', function (event) { alert('start: ' + event.url); });
@@ -35,50 +27,11 @@
         ref.addEventListener('exit', function (event) { alert(event.type); });
     }
     </script>
-
-
-
     <script src="cordova.js"></script>
-    <script src="scripts/platformOverrides.js"></script>
-    <script src="scripts/index.js"></script>
-    <script src="scripts/jquery.min.js"></script>
-    <script src="scripts/ww.jquery.min.js"></script>
-    <script src="scripts/ww.angular.js"></script>
-    <script src="scripts/lodash.min.js"></script>
-    <script src="scripts/fastclick.min.js"></script>
-
     <script>
-        // hook up fast click for mobile devices - avoid 300ms delay
         window.addEventListener('load', function () {
-            // only use FastClick for iOS
-            //if (navigator.userAgent.indexOf('iPhone') ||
-            //    navigator.userAgent.indexOf('iPad'))
             FastClick.attach(document.body);
         }, false);
     </script>
-    <!--<script src="js/angular-concat.min.js"></script>-->
-    <script src="scripts/angular/angular.min.js"></script>
-    <script src="scripts/angular/angular-route.min.js"></script>
-    <script src="scripts/angular/angular-animate.min.js"></script>
-    <script src="scripts/angular/angular-sanitize.min.js"></script>
-    <script src="scripts/angular/angular-touch.min.js"></script>
-
-    <!--<script src="../scripts/ww.angular.min.js"></script>-->
-    <script src="css/bootstrap.min.js"></script>
-    <script src="scripts/bootstrap-typeahead.min.js"></script>
-    <!-- combined app scripts - build with gulp -->
-    <!--<script src="js/app.min.js"></script>-->
-
-    <script src="app/js/app.js"></script>
-    <script src="app/js/albumService.js"></script>
-    <script src="app/js/albumServiceLocal.js"></script>
-    <script src="app/js/artistServiceLocal.js"></script>
-    <!-- BUG: for some reason headerController DOES NOT GET COPIED! -->
-    <script src="app/js/headerXController.js"></script>
-    <script src="app/js/albumsController.js"></script>
-    <script src="app/js/albumController.js"></script>
-    <script src="app/js/artistController.js"></script>
-    <script src="app/js/artistsController.js"></script>
-    <script src="app/js/optionsController.js"></script>
 </body>
 </html>

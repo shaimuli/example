@@ -4,19 +4,45 @@
     <feature name="InAppBrowser">
         <param name="android-package" value="org.apache.cordova.inappbrowser.InAppBrowser" />
     </feature>
-    <feature name="SplashScreen">
-        <param name="android-package" value="org.apache.cordova.splashscreen.SplashScreen" />
-    </feature>
     <feature name="StatusBar">
         <param name="android-package" onload="true" value="org.apache.cordova.statusbar.StatusBar" />
     </feature>
-    <name>MobileHomeDirector</name>
-    <description>A blank project that uses Apache Cordova to help you build an app that targets multiple mobile platforms: Android, iOS, Windows, and Windows Phone.</description>
-    <author email="dev@cordova.apache.org" href="http://cordova.io">Apache Cordova Team</author>
+    <feature name="SplashScreen">
+        <param name="android-package" value="org.apache.cordova.splashscreen.SplashScreen" />
+    </feature>
+    <name>Jetcopy</name>
+    <description>Jetcopy</description>
+    <author email="dev@cordova.apache.org" href="http://cordova.io">Jetcopy</author>
     <content src="index.html" />
+    <icon src="icon.png" />
+    <icon src="res/icon/android/icon-36-ldpi.png" />
+    <icon src="res/icon/android/icon-48-mdpi.png" />
+    <icon src="res/icon/android/icon-72-hdpi.png" />
+    <icon src="res/icon/android/icon-96-xhdpi.png" />
     <access origin="*" />
-    <vs:features />
-    <preference name="SplashScreen" value="screen" />
+    <preference name="permissions" value="none" />
+    <preference name="orientation" value="default" />
+    <preference name="target-device" value="universal" />
+    <preference name="fullscreen" value="true" />
+    <preference name="webviewbounce" value="true" />
+    <preference name="prerendered-icon" value="true" />
+    <preference name="stay-in-webview" value="false" />
+    <preference name="ios-statusbarstyle" value="black-opaque" />
+    <preference name="detect-data-types" value="true" />
+    <preference name="exit-on-suspend" value="false" />
+    <preference name="show-splash-screen-spinner" value="true" />
+    <preference name="auto-hide-splash-screen" value="true" />
+    <preference name="disable-cursor" value="false" />
+    <preference name="android-minSdkVersion" value="7" />
+    <preference name="android-installLocation" value="auto" />
+    <preference name="phonegap-version" value="3.7.0" />
+    <preference name="SplashScreen" value="splash" />
     <preference name="windows-target-version" value="8.0" />
     <preference name="windows-phone-target-version" value="8.1" />
+    <preference name="Fullscreen" value="true" />
+    <preference name="ShowTitle" value="True" />
+    <vs:plugin name="org.apache.cordova.inappbrowser" version="0.5.2" />
+    <vs:plugin name="org.apache.cordova.splashscreen" version="0.3.3" />
+    <vs:plugin name="org.apache.cordova.statusbar" version="0.1.8" />
+    <vs:platformSpecificValues />
 </widget>
