@@ -4,4 +4,7 @@
     <ReferenceCachePath>C:\Users\shai\AppData\Local\Temp\k22zfqv0_JetCopy_refcache</ReferenceCachePath>
     <ShowAllFiles>true</ShowAllFiles>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Android'">
+    <DebuggerFlavor>AndroidEmulator</DebuggerFlavor>
+  </PropertyGroup>
 </Project>

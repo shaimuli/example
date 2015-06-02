@@ -25,6 +25,21 @@
         ref.addEventListener('loadstop', function (event) { alert('stop: ' + event.url); });
         ref.addEventListener('loaderror', function (event) { alert('error: ' + event.message); });
         ref.addEventListener('exit', function (event) { alert(event.type); });
+        ref.addEventListener("backbutton", onBackKeyDown, false);
+    }
+
+    function onBackKeyDown(e) {
+        e.preventDefault();
+        navigator.notification.confirm("אתה בטוח שברצונך לצאת?", onConfirm, "Confirmation", "Yes,No");
+        // Prompt the user with the choice
+    }
+
+    function onConfirm(button) {
+        if (button == 2) {//If User selected No, then we just do nothing
+            return;
+        } else {
+            navigator.app.exitApp();// Otherwise we quit the app.
+        }
     }
     </script>
     <script src="cordova.js"></script>
