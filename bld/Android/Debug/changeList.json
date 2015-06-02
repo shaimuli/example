@@ -1078,7 +1078,9 @@
     "org.apache.cordova.statusbar@0.1.8"
   ],
   "deletedPluginsIos": [],
-  "changedFiles": [],
+  "changedFiles": [
+    "index.html"
+  ],
   "deletedFiles": [],
   "addedPlugins": [],
   "deletedPlugins": []
